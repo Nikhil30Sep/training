@@ -2,7 +2,7 @@ package com.company;
 import java.util.*;
 
 interface bank{
-    void deposite(long balance);
+    void deposit(long balance);
     void withdraw(long balance);
     void checkBalance(long balance);
 }
@@ -10,8 +10,8 @@ interface bank{
 class Alpha implements bank{
     Scanner sc = new Scanner(System.in);
     @Override
-    public void deposite(long balance){
-        System.out.println("Enter the amount you want to deposite : ");
+    public void deposit(long balance){
+        System.out.println("Enter the amount you want to deposit : ");
         int money = sc.nextInt();
         if(balance>0){
             balance = balance+money;
@@ -43,11 +43,11 @@ public class BankManagement {
         Alpha obj = new Alpha();
         long balance = 69000;
 
-        System.out.println("Enter 1 for Deposite  \n Enter 2 for Withdraw \n Enter 3 for Balance ");
+        System.out.println("Enter 1 for Deposit  \n Enter 2 for Withdraw \n Enter 3 for Balance ");
         int num = s.nextInt();
         switch (num) {
             case 1:
-                obj.deposite(balance);
+                obj.deposit(balance);
                 break;
             case 2:
                 obj.withdraw(balance);
